@@ -7,6 +7,11 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+main{
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
 /* celuLARES*/
 @media only screen
 and (max-width: 736px)
@@ -100,25 +105,58 @@ h1{
 .imgredSoc{
     width: 40px;
 }
+/* body */
+@media only screen
+and (max-width: 736px){ 
+    .home{
+        margin: 90px 0 30px 0;
+        flex-wrap: wrap;
+    }
+    .intro{
+        width: 100%;
+        padding: 10px 25px ;
+    }
+    .introTitulo, .introTituloB{
+        font-size: 2em;
+    }
+    .introimg{
+        display: none;
+    }
+}
+@media only screen
+and (min-width: 737px){
+    .home{
+        margin: 0 0 30px 0;
+        flex-wrap: nowrap;
+    }
+    .intro{
+        width: 40%;
+        padding: 0 25px 0 50px;
+    }
+    .introTitulo, .introTituloB{
+        font-size: 4em;
+    }
+    .introimg{
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
 .home{
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 0 0 30px 0;
 }
 .intro{
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 25px 0 50px;
 }
 .introTitulo, .introTituloB{
     font-family: 'Hind Vadodara', sans-serif;
     margin: 0;
     font-style: normal;
-    font-size: 4em;
     line-height: 50px;
     letter-spacing: -0.01em;
     color: #331B3B;
@@ -130,11 +168,7 @@ h1{
 .introTituloB{
     font-weight: 300;
 }
-.introimg{
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-}
+
 .group{
     width: 80%;
     height: 800px;
@@ -353,9 +387,18 @@ h1{
 and (max-width: 736px){ 
     .footBack{
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
     .infoFoot, .FormContac{
         width: 100%;
+        padding: 10px 2px;
+    }
+    .formContact{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(5, 25px);;
+        gap: 2px 5px;
     }
 }
 @media only screen
@@ -363,7 +406,16 @@ and (min-width: 737px){
     .infoFoot, .FormContac{
         width: 50%;
         height: 100%;
+        padding: 80px 50px;
     }
+    .formContact{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);;
+        gap: 10px 20px;
+    }
+
     
 }
 .footBack{
@@ -378,7 +430,6 @@ and (min-width: 737px){
     box-sizing: border-box;
 }
 .infoFoot, .FormContac{
-    padding: 80px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,12 +465,7 @@ and (min-width: 737px){
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
-.formContact{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(5, 2fr);;
-    gap: 10px 20px;
-}
+
 .txtNombre{
     grid-column: 1 / 2 ;
     grid-row: 1 / 2;
