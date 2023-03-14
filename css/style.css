@@ -350,9 +350,11 @@ h1{
 }
 /* pie de pagina*/
 .footBack{
-    background: url(/img/Rectangle39.png);
+   /* background: url(/img/Rectangle39.png);
     background-repeat: no-repeat;
-    background-size: 100% ;
+    background-size: 100% ;*/
+    background-color: #000;
+    border-radius: 0 120px 0 0;
     width: 100%;
     height: 453px;
     display: flex;
